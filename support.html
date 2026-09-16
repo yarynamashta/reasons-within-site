@@ -1,58 +1,84 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Support — Reasons Within</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,wght@0,500;1,500&display=swap" rel="stylesheet">
-<style>
-  :root{--ink:#222228;--muted:#525258;--accent:#b72855;--bg:#faf7f4}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 48px}
-  h1{font-family:"Newsreader",serif;font-weight:500;font-size:38px;margin:0 0 8px}
-  .lead{font-size:17px;color:var(--muted);margin:0 0 8px}
-  a{color:var(--accent)}
-  h2{font-size:19px;margin:34px 0 6px}
-  .q{font-weight:600;margin:22px 0 4px;font-size:16px}
-  p{font-size:16px;color:var(--muted);margin:0 0 12px}
-  .contact{margin:32px 0;padding:20px 22px;background:#fff;border-radius:14px;font-size:16px}
-  footer{margin-top:40px;padding-top:20px;border-top:1px solid #eceaee;font-size:14px}
-  footer a{margin-right:18px;text-decoration:none}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Help with Apple Health access, patterns, Reasons Within Plus, subscriptions, notifications, widgets, and privacy.">
+  <title>Support — Reasons Within</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
+  <nav class="language-nav" aria-label="Language">
+    <a href="support.html" lang="en" aria-current="page">English</a>
+    <a href="uk/support.html" lang="uk">Українська</a>
+    <a href="fr/support.html" lang="fr">Français</a>
+    <a href="es/support.html" lang="es">Español</a>
+  </nav>
+
   <h1>Support</h1>
-  <p class="lead">Reasons Within reads Apple Health on your iPhone to surface patterns in your own body. Here are the questions that come up most.</p>
+  <p>Reasons Within reads Apple Health on your iPhone to surface careful patterns in your own history.</p>
 
-  <div class="contact">
-    Need a hand? Email <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a> and we'll get back to you.
-  </div>
+  <div class="card">Need a hand? Email <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a>. Please do not include health measurements or other sensitive information in your message.</div>
 
-  <h2>Common questions</h2>
+  <h2>Apple Health</h2>
+  <h3>The app is empty or cannot read Health.</h3>
+  <p>Open the Health app, tap your profile picture, then Apps → Reasons Within. Enable the categories you are comfortable sharing. You can also open Reasons Within → Settings → Apple Health access. Apple does not reveal whether individual read categories were denied, so the app may show no data until access is enabled.</p>
 
-  <p class="q">The app is empty or says it can't read Health.</p>
-  <p>Reasons Within needs permission to read Apple Health. Open the iOS <b>Settings app → Privacy &amp; Security → Health → Reasons Within</b> and turn on the categories you're comfortable sharing. Wearing an Apple Watch to sleep fills in recovery and sleep data fastest.</p>
+  <h3>Why is a metric missing?</h3>
+  <p>The source device must first write that measurement to Apple Health. Some metrics need an Apple Watch or another compatible device, and sleep/recovery views need sufficiently recent measurements.</p>
 
-  <p class="q">Why don't I see any patterns yet?</p>
-  <p>Patterns are measured against your own history, so they need data to build from — usually a couple of weeks, and about a month before a pattern can be confirmed or a recovery forecast appears. Early silence is the app being honest, not broken.</p>
+  <h3>What does Reasons Within write to Apple Health?</h3>
+  <p>Only a mindful session for a breathing exercise you complete, and only after you allow it. The app never edits or deletes your existing Health records.</p>
 
-  <p class="q">I'm not getting notifications.</p>
-  <p>Make sure notifications are allowed in <b>Settings → Reasons Within → Notifications</b>. New-pattern alerts arrive at most once a day, no earlier than the time you choose under Customize → Notifications.</p>
+  <h2>Patterns, reviews, and forecasts</h2>
+  <h3>Why do I not see a pattern yet?</h3>
+  <p>Patterns need enough consistent personal history. A finding can appear as building evidence first and becomes confirmed only when it continues to hold. Silence is preferable to a weak claim.</p>
 
-  <p class="q">How do I add a widget?</p>
-  <p>Touch and hold your Home Screen, tap the + in the corner, search "Reasons Within," and pick Today, Bio Age, Activity, or Calories. Open the app once first so the widget has data to show.</p>
+  <h3>When does a recovery forecast appear?</h3>
+  <p>After an activity day, and only when your history contains enough confirmed recovery evidence. Forecasts pause when their recent accuracy no longer supports showing them.</p>
 
-  <p class="q">Where is my data stored?</p>
-  <p>On your iPhone. Your health data is analyzed on the device and never leaves it — see our <a href="privacy.html">Privacy Policy</a>.</p>
+  <h3>How do Weekly and Monthly Reviews work?</h3>
+  <p>Your first Weekly Review is free; Plus unlocks a new one each week. Monthly Reviews compare completed calendar months when enough data exists. On supported iPhones, Apple’s on-device language model may phrase the verified monthly facts; otherwise the app uses a complete app-written summary. Inputs and outputs stay on the device.</p>
+
+  <h3>Can I export a Monthly Review?</h3>
+  <p>Yes. Open the review and use Share. The export is created locally, and you choose where to send or save it.</p>
+
+  <h2>Reasons Within Plus</h2>
+  <h3>What stays free?</h3>
+  <p>Daily readiness, Feel, Health, Trends, Pattern Evidence, and your first Weekly Review remain free.</p>
+
+  <h3>What does Plus include?</h3>
+  <p>A new Weekly Review every week, Monthly Reviews, eligible recovery forecasts, an eight-week Bio Age trajectory, and the on-device Analysis and Pattern Archive.</p>
+
+  <h3>How do I restore or manage my subscription?</h3>
+  <p>Open Reasons Within → Settings → Reasons Within Plus. Use Restore purchases if an active subscription is not recognized. Subscribers can choose Manage subscription to change or cancel through Apple. Deleting the app does not cancel a subscription.</p>
+
+  <h3>How do I redeem an offer code?</h3>
+  <p>Open Reasons Within → Settings → Reasons Within Plus → Redeem offer code, then follow the App Store sheet.</p>
+
+  <h2>Notifications and widgets</h2>
+  <h3>I am not getting notifications.</h3>
+  <p>Allow notifications in the iOS Settings app under Reasons Within → Notifications. In the app, open the gear → Notifications to check the status and choose the earliest delivery time. Pattern alerts arrive at most once per day.</p>
+
+  <h3>How do I add a widget?</h3>
+  <p>Touch and hold your Home Screen, tap Edit or the + button, search for Reasons Within, and choose Today, Bio Age, Activity, or Calories. Open the app once first so the widget can receive a snapshot.</p>
+
+  <h2>Language and data</h2>
+  <h3>How do I change the app language?</h3>
+  <p>Open the gear → Language and choose English, Ukrainian, French, or Spanish.</p>
+
+  <h3>Where is my information stored?</h3>
+  <p>Your health data and personal content stay on your device. If you choose Share Analytics, limited usage and diagnostics are sent to PostHog’s EU service to help us improve the app. You can change this choice in Settings. See the <a href="privacy.html">Privacy Policy</a>.</p>
+
+  <h3>How do I delete my information?</h3>
+  <p>Deleting Reasons Within removes its local database, preferences, archive, and widget data from the device. Mindful sessions already saved to Apple Health remain in Health until you delete them there. To request deletion of pseudonymous analytics, email <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a>.</p>
 
   <footer>
     <a href="index.html">Home</a>
     <a href="privacy.html">Privacy Policy</a>
+    <a href="terms.html">Terms of Use</a>
   </footer>
-</div>
+</main>
 </body>
 </html>

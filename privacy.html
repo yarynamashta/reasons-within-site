@@ -1,69 +1,81 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Privacy Policy — Reasons Within</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&family=Newsreader:ital,wght@0,500&display=swap" rel="stylesheet">
-<style>
-  :root{--ink:#222228;--muted:#4c4c52;--accent:#b72855;--bg:#faf7f4}
-  *{box-sizing:border-box}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hanken Grotesk",system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
-  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 48px}
-  h1{font-family:"Newsreader",serif;font-weight:500;font-size:38px;margin:0 0 4px}
-  .date{font-size:14px;color:#8a8a90;margin:0 0 28px}
-  h2{font-size:18px;margin:32px 0 8px}
-  p,li{font-size:16px;color:var(--muted)}
-  li{margin-bottom:8px}
-  a{color:var(--accent)}
-  strong{color:var(--ink)}
-  footer{margin-top:40px;padding-top:20px;border-top:1px solid #eceaee;font-size:14px}
-  footer a{margin-right:18px;text-decoration:none}
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy Policy for the Reasons Within iOS app.">
+  <title>Privacy Policy — Reasons Within</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="wrap">
+<main class="wrap">
+  <nav class="language-nav" aria-label="Language">
+    <a href="privacy.html" lang="en" aria-current="page">English</a>
+    <a href="uk/privacy.html" lang="uk">Українська</a>
+    <a href="fr/privacy.html" lang="fr">Français</a>
+    <a href="es/privacy.html" lang="es">Español</a>
+  </nav>
+
   <h1>Privacy Policy</h1>
-  <p class="date">Reasons Within · Effective 20 July 2026</p>
+  <p class="date">Reasons Within · Effective 16 September 2026</p>
 
-  <p>Reasons Within is built so that your health data stays yours. This policy explains, plainly, what the app does and does not do with your information.</p>
+  <p>This policy describes how the Reasons Within iOS app handles information. Reasons Within is operated by Yaryna Maksymiuk. Privacy questions and requests can be sent to <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a>.</p>
 
-  <h2>Your health data stays on your device</h2>
-  <p>Reasons Within reads data from Apple Health — such as heart rate, heart rate variability, sleep, activity, cycle, and related measurements — only with your permission, and only the categories you choose to share. All analysis happens <strong>on your iPhone</strong>. Your health data is <strong>never transmitted off the device, never stored on our servers, never sold, and never used to train models</strong>. We operate no account system and no health-data server.</p>
+  <h2>Apple Health data</h2>
+  <p>With your permission, Reasons Within reads selected Apple Health categories, including heart, sleep, activity, body, respiratory, daylight, mindfulness, cycle, and related measurements. You decide which categories to allow.</p>
+  <p>Raw Apple Health measurements are processed on your iPhone. They are not uploaded to Reasons Within servers, sold, used for advertising, or used to train machine-learning models. Reasons Within has no account system and operates no health-data server.</p>
 
-  <h2>What the app writes back</h2>
-  <p>The only thing Reasons Within can add to Apple Health is a mindful (breathing) session that you complete yourself, and only if you opt in. It never edits or deletes your existing Health data.</p>
-
-  <h2>Anonymous usage analytics</h2>
-  <p>To understand how the app is used and to fix problems, Reasons Within collects a limited amount of <strong>anonymous</strong> analytics through PostHog, whose servers are located in the European Union. This is limited to:</p>
+  <h2>Information stored on your device</h2>
+  <p>The app stores information needed to provide its features locally, including:</p>
   <ul>
-    <li><strong>Product interaction</strong> — which screens and features are used (for example, opening a tab or logging a check-in).</li>
-    <li><strong>Diagnostics</strong> — crash and error reports, and basic performance timing.</li>
-    <li><strong>An anonymous, app-generated identifier</strong> and basic device information (device model, OS version, app version), used only to group these events.</li>
+    <li>Feel check-ins and optional notes;</li>
+    <li>goals, language, notification time, breathing, and display preferences;</li>
+    <li>pattern reactions, pattern lifecycle, and forecast calibration history;</li>
+    <li>Weekly and Monthly Reviews and the Plus Archive;</li>
+    <li>widget snapshots and notification scheduling state.</li>
   </ul>
-  <p>This analytics data is <strong>not linked to your identity</strong> — we do not collect your name, email, or account, because there is none. <strong>No health data is ever included in analytics.</strong> The app applies an automatic filter that prevents health measurements from being sent, regardless of the event.</p>
+  <p>This information is not uploaded to Reasons Within. Subscription entitlement is checked through Apple’s StoreKit service; Reasons Within does not receive your payment-card details.</p>
 
-  <h2>No tracking or advertising</h2>
-  <p>Reasons Within does not track you across other apps or websites, contains no advertising, and shares no data with data brokers or advertisers.</p>
+  <h2>On-device explanations</h2>
+  <p>On supported devices, a Monthly Review may use Apple’s on-device Foundation Models framework to phrase facts already calculated by the app. The prompt, health facts, and generated text remain on your device and are not sent to Reasons Within, PostHog, or a model-training service. When the framework is unavailable, the app uses a deterministic, localized summary.</p>
 
-  <h2>Children</h2>
-  <p>Reasons Within is not directed to children and is intended for users 18 and older.</p>
+  <h2>What the app writes to Apple Health</h2>
+  <p>The only record Reasons Within can add to Apple Health is a mindful session for a breathing exercise you complete, and only after you grant write permission. The app never edits or deletes existing Health records.</p>
+
+  <h2>Optional pseudonymous product analytics and diagnostics</h2>
+  <p>Before the analytics SDK is initialized, Reasons Within asks whether you want to share analytics. Only if you choose Share Analytics does the app send limited pseudonymous events to a PostHog project hosted in the European Union. These events use a random app-generated identifier and can include app version, operating-system and device information, timestamps, screens or features used, widget and notification interactions, purchase-flow outcomes, and technical error information.</p>
+  <p>Some operational events include limited categories or counts derived from app behavior—for example, a pattern type and stage, whether a forecast was eligible, agreement counts, or the identifier and availability status of a Health query. They do not include raw health measurements, Health dates, Feel scores or notes, notification content, review or archive text, exported content, or Foundation Models prompts and output.</p>
+  <p>Reasons Within does not send PostHog your name, email address, Apple Account, or advertising identifier and does not call PostHog’s identify API. As with any internet request, PostHog’s service receives the connecting IP address. We do not use analytics to track you across other companies’ apps or websites, and we do not use it for advertising.</p>
+  <p>Analytics events are kept only for as long as reasonably necessary to evaluate reliability and feature use, then deleted or aggregated. PostHog acts as our analytics processor and is required to protect the information it handles. Learn more in <a href="https://posthog.com/privacy">PostHog’s privacy notice</a>.</p>
+
+  <h2>Retention and deletion</h2>
+  <p>Local information remains until you remove it through the app, overwrite it through normal use, or delete the app. Deleting Reasons Within removes its local database, preferences, archive, and widget container from the device. A mindful session already written to Apple Health remains in Health until you delete it there.</p>
+  <p>To request access to or deletion of analytics associated with your app-generated identifier, contact <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a>. We may need limited device or event details to locate the relevant records.</p>
 
   <h2>Your choices</h2>
-  <p>You control Health access at any time in the iOS Settings app under Privacy &amp; Security → Health. Because your health data is never stored off your device, deleting the app removes it from your phone entirely.</p>
+  <p>Analytics is based on your consent. You can allow or withdraw it at any time in Reasons Within → Settings → Share analytics and diagnostics. Withdrawing consent stops future collection and does not change app functionality. You can change Health permissions in the Health app by opening your profile, then Apps → Reasons Within. Notification permissions are controlled in iOS Settings.</p>
+  <p>You may also contact us to exercise privacy rights available where you live, including access, correction, deletion, restriction, objection, withdrawal of consent, or lodging a complaint with a supervisory authority.</p>
+
+  <h2>No advertising or data sales</h2>
+  <p>Reasons Within contains no advertising, does not sell personal information, and does not share information with data brokers or advertisers.</p>
+
+  <h2>Children’s privacy</h2>
+  <p>The app does not ask for a user’s age and does not send names, contact details, or raw Apple Health data through analytics. If you believe information relating to a child was submitted to us, contact us so we can investigate and delete it where applicable.</p>
+
+  <h2>International processing</h2>
+  <p>Analytics is processed through PostHog’s European Union hosting. Apple processes App Store purchases and Apple Health services under its own terms and privacy policy.</p>
 
   <h2>Changes</h2>
-  <p>If this policy changes, we will update this page and revise the effective date above.</p>
+  <p>We may update this policy when the app or legal requirements change. We will revise the effective date on this page. Material changes will be communicated in the app or App Store listing when appropriate.</p>
 
   <h2>Contact</h2>
-  <p>Questions about privacy? Email <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a>.</p>
+  <p>Privacy questions or requests: <a href="mailto:info@reasonswithin.com">info@reasonswithin.com</a>.</p>
 
   <footer>
     <a href="index.html">Home</a>
     <a href="support.html">Support</a>
+    <a href="terms.html">Terms of Use</a>
   </footer>
-</div>
+</main>
 </body>
 </html>

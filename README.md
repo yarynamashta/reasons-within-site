@@ -13,3 +13,7 @@ Static marketing and support site for the Reasons Within iOS app.
 | `index.html` | Landing page |
 | `support.html` | Support / FAQ |
 | `privacy.html` | Privacy policy |
+| `terms.html` | Terms of use and subscription terms |
+| `uk/`, `fr/`, `es/` | Localized versions of every page |
+
+All pages use `styles.css` and load no third-party scripts, analytics, or remote fonts.

@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.prerender/
+.env.local
+test-results/
+
+.env
+.env.*
+!.env.example
+.vercel/
+!.env.production

@@ -1,0 +1,22 @@
+{
+  "name": "reasons-within-web",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1",
+    "build": "vite build && vite build --ssr src/prerender.jsx --outDir .prerender && node .prerender/prerender.js",
+    "preview": "vite preview --host 127.0.0.1",
+    "check": "node scripts/check.mjs"
+  },
+  "dependencies": {
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "vite": "^7.1.5",
+    "@vitejs/plugin-react": "^5.0.2",
+    "@playwright/test": "^1.55.0",
+    "@axe-core/playwright": "^4.10.2"
+  }
+}

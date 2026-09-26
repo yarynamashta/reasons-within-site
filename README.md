@@ -1,6 +1,6 @@
 # Reasons Within website
 
-React + Vite marketing website for Reasons Within, prepared for Vercel at https://reasonswithin.com/. This repository now contains the designed website from the local `reasons-within-web` project.
+React + Vite marketing website for Reasons Within, prepared for Vercel at https://www.reasonswithin.com/. This repository now contains the designed website from the local `reasons-within-web` project.
 
 ## Run locally
 
@@ -33,14 +33,14 @@ directory. `vercel.json` includes these settings. If the project was already
 imported as a plain HTML site, update its settings to match and redeploy.
 
 The tracked `.env.production` contains only public build configuration: the
-production origin `https://reasonswithin.com`, root base path, and the published
+production origin `https://www.reasonswithin.com`, root base path, and the published
 feedback form URL. No account credentials are needed for the build. Vercel
 environment variables override these settings; remove stale `SITE_URL` or
 `BASE_PATH` overrides before deploying.
 
-Add `reasonswithin.com` in Vercel's Domains settings and apply the DNS records
-shown there at your DNS provider. Configure `www.reasonswithin.com` to redirect
-to the primary domain. Wait for domain verification and HTTPS, then check the
+Use `www.reasonswithin.com` as the primary Vercel domain and apply the DNS
+records shown in Vercel. The apex `reasonswithin.com` did not resolve during
+the September 26 audit; once its DNS is configured, redirect it to `www`. Wait for domain verification and HTTPS, then check the
 homepage, `/uk/`, `/support/`, `/feedback/`, `/sitemap.xml`, and `/robots.txt`.
 Old `.html` page addresses permanently redirect to their new directory URLs.
 Unknown routes should return HTTP 404; no SPA fallback is configured.
@@ -51,9 +51,34 @@ non-indexable preview build, run `SITE_URL= npm run build`; rebuild normally
 before production. The original `reasons-within-web` directory remains untouched.
 
 After deployment, verify the domain in Google Search Console and submit
-`https://reasonswithin.com/sitemap.xml`. If the old GitHub Pages deployment is
-still active, disable it in the repository's Pages settings; it does not build
-this Vite application. Search rankings and indexing cannot be guaranteed.
+`https://www.reasonswithin.com/sitemap.xml`. Keep the old GitHub Pages address active using the compatibility deployment
+below: the App Store and already-installed iOS versions still link to it. Search rankings and indexing cannot be guaranteed.
+
+## Legacy GitHub Pages links
+
+The App Store and shipped iOS app still use
+`https://yarynamashta.github.io/reasons-within-site/` and its `.html` legal URLs.
+GitHub Pages must use **GitHub Actions** as its publishing source, not the root
+of `main`: the root contains Vite source, which a browser cannot run directly.
+
+`.github/workflows/legacy-pages.yml` validates the production build and deploys
+only `.legacy-pages/` to GitHub Pages. That artifact forwards the homepage,
+privacy, support, terms, and feedback URLs in all four languages to the working
+`https://www.reasonswithin.com` site. Both old `.html` and clean directory paths
+are covered. Each page uses an immediate HTML refresh, a canonical URL, and a
+visible fallback link, so navigation does not depend on JavaScript. These are
+static browser forwards, not HTTP 301 responses. Unknown paths retain a 404.
+
+```sh
+npm run build
+npm run build:legacy
+npm run check:legacy
+```
+
+After the first deployment, check the old homepage and `/privacy.html`, plus
+`/uk/privacy.html`, `/fr/privacy.html`, and `/es/privacy.html`, in a browser.
+Keep this compatibility deployment even after updating App Store Connect;
+installed app versions may continue using the old URLs.
 
 ## Feedback
 

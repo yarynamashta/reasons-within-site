@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { readFileSync, readdirSync } from "node:fs";
-const site = (process.env.SITE_URL || "https://reasonswithin.com").replace(/\/$/, "");
+const site = (process.env.SITE_URL || "https://www.reasonswithin.com").replace(/\/$/, "");
 const files = readdirSync("dist", { recursive: true }).filter(
   (p) => p.endsWith(".html") && p !== "404.html",
 );

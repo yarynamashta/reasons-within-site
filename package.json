@@ -7,7 +7,9 @@
     "dev": "vite --host 127.0.0.1",
     "build": "vite build && vite build --ssr src/prerender.jsx --outDir .prerender && node .prerender/prerender.js",
     "preview": "vite preview --host 127.0.0.1",
-    "check": "node scripts/check.mjs"
+    "check": "node scripts/check.mjs",
+    "build:legacy": "node scripts/build-legacy-pages.mjs",
+    "check:legacy": "node scripts/check-legacy-pages.mjs"
   },
   "dependencies": {
     "react": "^19.1.1",
